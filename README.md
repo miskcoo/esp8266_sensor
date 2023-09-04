@@ -47,3 +47,7 @@ This is an ESP8266-based environmental sensor. We use AM2320 as the temperature 
       } 
   }
 ```
+
+## Instantiation
+
+![](https://nullptr.me/assets/images/esp8266-sensor/esp8266-sensor-example.jpg)
