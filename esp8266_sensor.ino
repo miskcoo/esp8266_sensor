@@ -157,6 +157,9 @@ void setup()
 
 void loop()
 {
+    /* The following code of HTTP server is modified from
+     * https://randomnerdtutorials.com/esp8266-web-server/ 
+     */
     WiFiClient client( wifiServer.available() );
     if (client) {                             // If a new client connects,
         Serial.println("New Client.");          // print a message out in the serial port
