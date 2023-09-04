@@ -7,7 +7,7 @@ This is an ESP8266-based environmental sensor. We use AM2320 as the temperature 
 
 - Install [arduino-cli](https://github.com/arduino/arduino-cli) and the [ESP8266 core](https://arduino.github.io/arduino-cli/0.33/getting-started/#adding-3rd-party-cores).
 - Create and edit `credentials.h` to specify the WiFi SSID / password:
-  ```c++
+```c++
 #ifndef WIFI_CREDENTIALS_H
 #define WIFI_CREDENTIALS_H
 
@@ -15,17 +15,17 @@ This is an ESP8266-based environmental sensor. We use AM2320 as the temperature 
 #define WIFI_PASSWORD  "your WiFi password"
 
 #endif
-  ```
+```
 - (optional) Set the SGP30 CO2 / TVOC baseline in `esp8266_sensor.ino` (see the `TODO` comment in this file). 
 - Wire SGP30 to ESP8266: `SDA -> GPIO4 (D1)` and `SCL -> GPIO5 (D2)`
 - Wire AM2320 to ESP8266: `SDA -> GPIO12 (D6)` and `SCL -> GPIO14 (D5)`
 - Compile and upload the binary
-  ```bash
+```bash
   arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2 . --libraries libs
   arduino-cli upload --port /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 .
-  ```
+```
 - Query the sensor data via `curl http://your-esp8266-ip`, an example output is
-  ```json
+```json
   { 
       "uptime": 3318604, 
       "am2320": { 
@@ -46,4 +46,4 @@ This is an ESP8266-based environmental sensor. We use AM2320 as the temperature 
           "last_time": 12152 
       } 
   }
-  ```
+```
