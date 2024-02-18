@@ -1,0 +1,9 @@
+[submodule "libs/AM2320"]
+	path = libs/AM2320
+	url = https://github.com/hibikiledo/AM2320.git
+[submodule "libs/ESP8266TimerInterrupt"]
+	path = libs/ESP8266TimerInterrupt
+	url = https://github.com/khoih-prog/ESP8266TimerInterrupt.git
+[submodule "libs/SGP30"]
+	path = libs/SGP30
+	url = https://github.com/RobTillaart/SGP30.git
